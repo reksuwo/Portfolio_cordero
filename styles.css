@@ -1079,17 +1079,29 @@ h2 {
 
 @media (max-width: 768px) {
     /* Navigation */
-    nav ul {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 0.7rem;
-        margin-top: 0.5rem;
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 1.2rem;
+        right: 2rem;
     }
-    nav a {
-        font-size: 0.95rem;
-        letter-spacing: 1px;
-        padding: 0.5rem 0.7rem;
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background: rgba(16, 16, 16, 0.98);
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0,255,136,0.18);
+        padding: 1.2rem 1.5rem;
+        gap: 1.2rem;
+        z-index: 2000;
+        min-width: 160px;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+    nav ul.open {
+        display: flex;
     }
 
     /* Home Section */
