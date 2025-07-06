@@ -2092,13 +2092,9 @@ h2 {
     border: 1px solid rgba(0,255,136,0.18);
 }
 .exp-details {
-    margin: 0 0 0 1.2rem;
+    list-style: none;
+    margin: 0;
     padding: 0;
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    list-style: disc;
 }
 .exp-subrole {
     font-family: 'Inter', sans-serif;
