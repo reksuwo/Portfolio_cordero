@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Teamwork': 'Collaborative team player with strong communication and coordination skills.'
     };
 
-    // Add hover listeners for all skills
+    // Add hover and touch listeners for all skills
     function addSkillHoverListeners() {
         document.querySelectorAll('.skills-list li').forEach(li => {
             li.addEventListener('mouseenter', function() {
@@ -113,6 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             li.addEventListener('mouseleave', function() {
                 document.getElementById('skill-description').textContent = 'Hover over a skill to see its description.';
+            });
+            // Touch support for mobile
+            li.addEventListener('touchstart', function() {
+                this.classList.add('active');
+            });
+            li.addEventListener('touchend', function() {
+                setTimeout(() => this.classList.remove('active'), 500);
             });
         });
     }
