@@ -1080,14 +1080,16 @@ h2 {
 @media (max-width: 768px) {
     /* Navigation */
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 1rem;
+        justify-content: center;
+        gap: 0.7rem;
+        margin-top: 0.5rem;
     }
-
     nav a {
-        font-size: 1rem;
+        font-size: 0.95rem;
         letter-spacing: 1px;
+        padding: 0.5rem 0.7rem;
     }
 
     /* Home Section */
