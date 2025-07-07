@@ -2234,6 +2234,82 @@ h2 {
     flex-direction: column;
 }
 
+/* Certificates Section */
+.certificates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.certificate-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 255, 136, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.05);
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 136, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 255, 136, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.cert-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.cert-issuer {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #00ff88;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.cert-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #00c3ff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.cert-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 12px 0 rgba(0,255,136,0.10);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.cert-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 600px) {
     .experience-list {
         gap: 1rem;
@@ -2269,10 +2345,42 @@ h2 {
         margin-top: 0.1rem;
         word-break: break-word;
     }
+    
+    /* Certificates responsive styles */
+    .certificates-list {
+        gap: 1rem;
+        margin-top: 1.2rem;
+    }
+    .certificate-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0.7rem;
+        gap: 0.7rem;
+    }
+    .cert-logo {
+        width: 38px;
+        height: 38px;
+        margin-bottom: 0.5rem;
+    }
+    .cert-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        margin-bottom: 0.3rem;
+    }
+    .cert-title {
+        font-size: 1.05rem;
+    }
+    .cert-issuer {
+        font-size: 0.95rem;
+    }
+    .cert-date {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 400px) {
-    .container, .section, .project-card, .about-box, .skills-details, .modal-content, .contact-box, .experience-item {
+    .container, .section, .project-card, .about-box, .skills-details, .modal-content, .contact-box, .experience-item, .certificate-item {
         max-width: 100vw;
         width: 100vw;
         min-width: 0;
@@ -2280,13 +2388,13 @@ h2 {
         padding-left: 0.3rem !important;
         padding-right: 0.3rem !important;
     }
-    .project-card, .about-box, .skills-details, .modal-content, .contact-box, .experience-item {
+    .project-card, .about-box, .skills-details, .modal-content, .contact-box, .experience-item, .certificate-item {
         padding: 0.7rem 0.3rem !important;
     }
     h1, h2, h3 {
         font-size: 1.1rem !important;
     }
-    .skills-list li, .tech-list li, .exp-subrole, .exp-role, .exp-date, .exp-header, .contact-item p, .skills-description p {
+    .skills-list li, .tech-list li, .exp-subrole, .exp-role, .exp-date, .exp-header, .contact-item p, .skills-description p, .cert-title, .cert-issuer, .cert-date {
         font-size: 0.85rem !important;
     }
     .profile-image {
@@ -2296,7 +2404,7 @@ h2 {
 }
 
 @media (max-width: 320px) {
-    .container, .section, .project-card, .about-box, .skills-details, .modal-content, .contact-box, .experience-item {
+    .container, .section, .project-card, .about-box, .skills-details, .modal-content, .contact-box, .experience-item, .certificate-item {
         max-width: 100vw;
         width: 100vw;
         min-width: 0;
@@ -2304,13 +2412,13 @@ h2 {
         padding-left: 0.1rem !important;
         padding-right: 0.1rem !important;
     }
-    .project-card, .about-box, .skills-details, .modal-content, .contact-box, .experience-item {
+    .project-card, .about-box, .skills-details, .modal-content, .contact-box, .experience-item, .certificate-item {
         padding: 0.4rem 0.1rem !important;
     }
     h1, h2, h3 {
         font-size: 0.95rem !important;
     }
-    .skills-list li, .tech-list li, .exp-subrole, .exp-role, .exp-date, .exp-header, .contact-item p, .skills-description p {
+    .skills-list li, .tech-list li, .exp-subrole, .exp-role, .exp-date, .exp-header, .contact-item p, .skills-description p, .cert-title, .cert-issuer, .cert-date {
         font-size: 0.7rem !important;
     }
     .profile-image {
